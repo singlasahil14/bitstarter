@@ -5,7 +5,7 @@ app.use(express.logger());
 
 var data = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
 app.get('/', function(request, response) {
-  response.send(data);
+  response.send('Hello world 2');
 });
 
 var port = process.env.PORT || 5000;
