@@ -1,5 +1,3 @@
-var fs = require('fs');
-var data=fs.readFileSync('~/bitstarter/index.html');
 var express = require('express');
 var app = express();
 app.use(express.logger());
