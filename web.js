@@ -5,7 +5,7 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(data);
+  response.send('Hello world 2');
 });
 
 var port = process.env.PORT || 5000;
