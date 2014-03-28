@@ -7,7 +7,7 @@ var data = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
 var buf = data.toString();
 
 app.get('/', function(request, response) {
-  response.send(buf);
+  response.send("Hello world 2");
 });
 
 var port = process.env.PORT || 5000;
