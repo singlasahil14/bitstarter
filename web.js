@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
+var data = fs.readFileSync('~/bitstarter/index.html');
 app.get('/', function(request, response) {
   response.send('Hello world 2');
 });
