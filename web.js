@@ -4,7 +4,6 @@ var app = express();
 app.use(express.logger());
 
 var buf = fs.readFile('/home/ubuntu/bitstarter/index.html',function (err,data) {
-  if (err) throw err;
   console.log(data);
 });
 
