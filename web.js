@@ -5,6 +5,8 @@ app.use(express.logger());
 
 var buf = fs.readFileSync('/home/ubuntu/bitstarter/index.html',{ encoding: 'utf8',flag: 'r' });
 
+console.log(buf);
+
 app.get('/', function(request, response) {
   response.send(buf);
 });
