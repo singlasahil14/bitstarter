@@ -1,8 +1,12 @@
+var fs = require('fs');
 var express = require('express');
 var app = express();
+app.use(express.logger());
+
+buf = new Buffer(fs.readFileSync("index.html"),"utf8");
 
 app.get('/', function(request, response) {
-  response.sendfile('/home/ubuntu/index.html');
+  response.send(buf.toString());
 });
 
 var port = process.env.PORT || 5000;
