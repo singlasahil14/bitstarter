@@ -7,8 +7,10 @@ var buf = fs.readFile('/home/ubuntu/bitstarter/index.html',function (err,data) {
   console.log(data);
 });
 
+var str = buf.toString();
+
 app.get('/', function(request, response) {
-  response.send(buf);
+  response.send(str);
 });
 
 var port = process.env.PORT || 5000;
