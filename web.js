@@ -3,11 +3,9 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-var buf = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
+var buf = fs.readFileSync('/home/ubuntu/bitstarter/index.html',{ encoding: 'utf8',flag: 'r' });
 
-var str = buf.toString('utf-8');
-
-console.log(str);
+var str = data.toString('utf8');
 
 app.get('/', function(request, response) {
   response.send(str);
