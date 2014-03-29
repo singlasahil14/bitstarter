@@ -7,7 +7,7 @@ var buf = fs.readFile('/home/ubuntu/bitstarter/index.html','utf8',function (err,
   console.log(data);
 });
 
-var str = buf.toString();
+var str = buf.toString('utf8');
 
 app.get('/', function(request, response) {
   response.send(str);
