@@ -5,10 +5,8 @@ app.use(express.logger());
 
 var buf = fs.readFileSync('/home/ubuntu/bitstarter/index.html',{ encoding: 'utf8',flag: 'r' });
 
-var str = data.toString('utf8');
-
 app.get('/', function(request, response) {
-  response.send(str);
+  response.send(buf);
 });
 
 var port = process.env.PORT || 5000;
